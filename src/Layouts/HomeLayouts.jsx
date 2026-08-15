@@ -19,8 +19,8 @@ const HomeLayouts = () => {
                     <Navbar></Navbar>
                 </nav>
             </header>
-            <main className='w-11/12 mx-auto my-3 grid grid-cols-12 mt-10'>
-                <aside className='col-span-3'>
+            <main className='w-11/12 mx-auto my-3 grid grid-cols-12 gap-5 mt-10' >
+                <aside className='col-span-3 sticky h-fit top-0'>
                     <LeftAside></LeftAside>
                 </aside>
 
@@ -28,7 +28,7 @@ const HomeLayouts = () => {
                     {/* <CategoryNews></CategoryNews> */}
                     <Outlet></Outlet>
                 </section>
-                <aside className='col-span-3'>
+                <aside className='col-span-3 h-fit top-0'>
                     <RightAside></RightAside>
                 </aside>
             </main>
