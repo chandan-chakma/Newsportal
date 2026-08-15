@@ -28,7 +28,7 @@ const HomeLayouts = () => {
                     {/* <CategoryNews></CategoryNews> */}
                     <Outlet></Outlet>
                 </section>
-                <aside className='col-span-3 h-fit top-0'>
+                <aside className='col-span-3 h-fit sticky top-0'>
                     <RightAside></RightAside>
                 </aside>
             </main>
