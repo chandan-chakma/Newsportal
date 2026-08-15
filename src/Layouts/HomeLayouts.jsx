@@ -4,6 +4,8 @@ import Header from '../Components/Header.jsx';
 import LatestNews from '../Components/LatestNews.jsx';
 import Navbar from '../Components/Navbar.jsx';
 import LeftAside from '../Components/LeftAside.jsx';
+import RightAside from '../Components/RightAside.jsx';
+import CategoryNews from '../Pages/CategoryNews.jsx';
 
 const HomeLayouts = () => {
     return (
@@ -17,16 +19,18 @@ const HomeLayouts = () => {
                     <Navbar></Navbar>
                 </nav>
             </header>
-            <main>
-                <aside>
+            <main className='w-11/12 mx-auto my-3 grid grid-cols-12 mt-10'>
+                <aside className='col-span-3'>
                     <LeftAside></LeftAside>
                 </aside>
 
-                <section className='main'>
+                <section className='main col-span-6'>
+                    {/* <CategoryNews></CategoryNews> */}
                     <Outlet></Outlet>
                 </section>
-
-                <section className='right-nav'></section>
+                <aside className='col-span-3'>
+                    <RightAside></RightAside>
+                </aside>
             </main>
             
         </div>
