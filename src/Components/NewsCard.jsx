@@ -7,10 +7,12 @@ import {
     FaEye,
     FaStar
 } from 'react-icons/fa6';
+import { Link } from 'react-router';
 
 const NewsCard = ({ news }) => {
 
     const {
+        id,
         title,
         rating,
         total_view,
@@ -110,9 +112,9 @@ const NewsCard = ({ news }) => {
                 </p>
 
                 {/* Read More */}
-                <button className="text-secondary text-sm font-medium mt-1 hover:underline">
+                <Link to={`/newsDetails/${id}`} className="text-secondary text-sm font-medium mt-1 hover:underline">
                     Read More
-                </button>
+                </Link>
 
             </div>
 
