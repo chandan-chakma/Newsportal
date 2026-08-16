@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigate, useNavigation } from 'react-router';
 import Header from '../Components/Header.jsx';
 import LatestNews from '../Components/LatestNews.jsx';
 import Navbar from '../Components/Navbar.jsx';
@@ -8,6 +8,7 @@ import RightAside from '../Components/RightAside.jsx';
 import CategoryNews from '../Pages/CategoryNews.jsx';
 
 const HomeLayouts = () => {
+    const {state}= useNavigation()
     return (
         <div>
             <header>
@@ -26,7 +27,7 @@ const HomeLayouts = () => {
 
                 <section className='main col-span-6'>
                     {/* <CategoryNews></CategoryNews> */}
-                    <Outlet></Outlet>
+                    {state == 'loading'? <span className="loading loading-spinner loading-xl"></span>: <Outlet></Outlet>}
                 </section>
                 <aside className='col-span-3 h-fit sticky top-0'>
                     <RightAside></RightAside>
